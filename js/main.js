@@ -59,12 +59,36 @@ function initGlobalSearchOverlay() {
 function initMobileNavDrawer() {
   const trigger = document.getElementById('mobile-menu-trigger');
   const drawer = document.getElementById('mobile-nav-drawer');
+  const closeBtn = document.getElementById('mobile-menu-close');
 
   if (trigger && drawer) {
-    trigger.addEventListener('click', () => {
-      drawer.classList.toggle('active');
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      drawer.classList.add('active');
     });
   }
+
+  if (closeBtn && drawer) {
+    closeBtn.addEventListener('click', () => {
+      drawer.classList.remove('active');
+    });
+  }
+
+  // Close when clicking outside drawer
+  document.addEventListener('click', (e) => {
+    if (drawer && drawer.classList.contains('active')) {
+      if (!drawer.contains(e.target) && trigger && !trigger.contains(e.target)) {
+        drawer.classList.remove('active');
+      }
+    }
+  });
+
+  // Close on nav link click
+  drawer?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      drawer.classList.remove('active');
+    });
+  });
 }
 
 function openQuickAddModal(productId) {

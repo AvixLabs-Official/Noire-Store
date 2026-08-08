@@ -21,6 +21,11 @@
   <!-- Editorial Header -->
   <header class="site-header">
     <div class="container header-container">
+      <button class="mobile-hamburger-btn" id="mobile-menu-trigger" aria-label="Open Navigation Menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
       <ul class="nav-links-left">
         <li><a href="../shop/shop.html">← Back to Collection</a></li>
       </ul>
@@ -28,12 +33,28 @@
       <a href="../index.html" class="brand-logo-center">NOIRÉ</a>
 
       <div class="header-actions-right">
-        <a href="#" id="nav-search-trigger">Search 🔍</a>
-        <a href="../shop/shop.html">Wishlist (<span class="wishlist-count-badge">0</span>)</a>
-        <a href="../cart/cart.html">Bag (<span class="bag-count-badge">0</span>)</a>
+        <a href="#" id="nav-search-trigger">🔍 <span class="desktop-only">Search</span></a>
+        <a href="../shop/shop.html">♡ <span class="desktop-only">Wishlist</span> (<span class="wishlist-count-badge">0</span>)</a>
+        <a href="../cart/cart.html">🛍️ <span class="desktop-only">Bag</span> (<span class="bag-count-badge">0</span>)</a>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <span class="brand-logo-center" style="font-size:1.6rem;">NOIRÉ</span>
+      <button class="mobile-drawer-close-btn" id="mobile-menu-close" style="font-size:1.4rem; cursor:pointer;">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="../shop/shop.html">Shop All Pieces</a></li>
+      <li><a href="../shop/shop.html?category=Bags">Bags & Leather</a></li>
+      <li><a href="../shop/shop.html?category=Watches">Watches & Personal</a></li>
+      <li><a href="../shop/shop.html?category=Home">Home & Ceramics</a></li>
+      <li><a href="../cart/cart.html">My Shopping Bag</a></li>
+      <li><a href="../orders/orders.html">My Orders</a></li>
+    </ul>
+  </div>
 
   <main>
     <div class="container">
