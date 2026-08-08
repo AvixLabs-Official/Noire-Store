@@ -1,0 +1,57 @@
+/* ==========================================================================
+   NOIRÉ - Responsive Reflow Stylesheet
+   360px, 375px, 390px, 430px, 768px, 1024px, 1280px, 1920px
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links-left {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-detail-grid, .cart-summary-box, .checkout-form-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cart-item-row {
+    grid-template-columns: 60px 1fr 40px;
+    gap: 12px;
+  }
+
+  .cart-item-total {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .add-to-bag-strip {
+    flex-direction: column;
+  }
+}

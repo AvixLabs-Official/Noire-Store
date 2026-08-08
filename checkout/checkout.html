@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — NOIRÉ</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Encrypted & Secure SSL Checkout Demonstration
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container" style="justify-content:center;">
+      <a href="../index.html" class="brand-logo-center">NOIRÉ</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <form id="checkout-main-form" onsubmit="processCheckoutSubmission(event)">
+        <div class="checkout-form-grid">
+          <div>
+            <h2 style="font-family:var(--font-heading); font-size:2rem; margin-bottom:24px;">CHECKOUT DETAILS</h2>
+
+            <!-- Contact -->
+            <div style="margin-bottom:32px;">
+              <h3 style="font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">1. Contact Information</h3>
+              <input type="text" id="chk-name" placeholder="Full Name *" required class="form-input-control" value="Alex Morgan">
+              <div class="form-group-row">
+                <input type="email" id="chk-email" placeholder="Email Address *" required class="form-input-control" value="alex.morgan@example.com">
+                <input type="tel" id="chk-phone" placeholder="Phone Number *" required class="form-input-control" value="+91 98765 43210">
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div style="margin-bottom:32px;">
+              <h3 style="font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">2. Shipping Address</h3>
+              <input type="text" id="chk-address" placeholder="Street Address *" required class="form-input-control" value="Suite 402, High Street Towers">
+              <div class="form-group-row">
+                <input type="text" id="chk-city" placeholder="City *" required class="form-input-control" value="Mumbai">
+                <input type="text" id="chk-pincode" placeholder="PIN Code *" required class="form-input-control" value="400001">
+              </div>
+            </div>
+
+            <!-- Delivery Method -->
+            <div style="margin-bottom:32px;">
+              <h3 style="font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">3. Delivery Speed</h3>
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <label style="display:flex; align-items:center; gap:12px; padding:14px; border:1px solid var(--border-color); cursor:pointer;">
+                  <input type="radio" name="shipping_method" value="standard" checked>
+                  <div>
+                    <strong>Standard Delivery (3–5 Business Days)</strong>
+                    <div style="font-size:0.8rem; color:var(--color-secondary);">Free on orders over ₹5,000, else ₹199</div>
+                  </div>
+                </label>
+
+                <label style="display:flex; align-items:center; gap:12px; padding:14px; border:1px solid var(--border-color); cursor:pointer;">
+                  <input type="radio" name="shipping_method" value="express">
+                  <div>
+                    <strong>Express Air Delivery (1–2 Business Days)</strong>
+                    <div style="font-size:0.8rem; color:var(--color-secondary);">₹399 flat express fee</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Payment Method Demo -->
+            <div style="margin-bottom:32px;">
+              <h3 style="font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">4. Payment Demo</h3>
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <label style="display:flex; align-items:center; gap:12px; padding:14px; border:1px solid var(--border-color); cursor:pointer;">
+                  <input type="radio" name="payment_method" value="card" checked>
+                  <strong>Credit / Debit Card (Demo)</strong>
+                </label>
+
+                <div id="pay-box-card" class="payment-fields-box">
+                  <input type="text" placeholder="Card Number (Demo)" class="form-input-control" value="4532 •••• •••• 8892">
+                  <div class="form-group-row">
+                    <input type="text" placeholder="MM / YY" class="form-input-control" value="08 / 28">
+                    <input type="text" placeholder="CVV" class="form-input-control" value="842">
+                  </div>
+                </div>
+
+                <label style="display:flex; align-items:center; gap:12px; padding:14px; border:1px solid var(--border-color); cursor:pointer;">
+                  <input type="radio" name="payment_method" value="upi">
+                  <strong>Instant UPI (Google Pay, PhonePe, Paytm)</strong>
+                </label>
+
+                <div id="pay-box-upi" class="payment-fields-box" style="display:none;">
+                  <input type="text" placeholder="Enter Virtual Payment Address (e.g. alex@upi)" class="form-input-control" value="alexmorgan@okaxis">
+                </div>
+
+                <label style="display:flex; align-items:center; gap:12px; padding:14px; border:1px solid var(--border-color); cursor:pointer;">
+                  <input type="radio" name="payment_method" value="cod">
+                  <strong>Cash on Delivery (COD)</strong>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Complete Order & Place Order →</button>
+          </div>
+
+          <!-- Checkout Order Summary -->
+          <div class="cart-summary-box" id="checkout-order-summary-box">
+            <!-- Rendered dynamically by js/checkout.js -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/checkout.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

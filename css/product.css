@@ -1,0 +1,156 @@
+/* ==========================================================================
+   NOIRÉ - Standalone Product Detail Page Stylesheet
+   ========================================================================== */
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: start;
+  padding: 60px 0 100px;
+}
+
+.main-gallery-img-box {
+  aspect-ratio: 3/4;
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.main-gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-thumbs-row {
+  display: flex;
+  gap: 12px;
+}
+
+.thumb-img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.thumb-img.active, .thumb-img:hover {
+  opacity: 1;
+  border-color: var(--text-primary);
+}
+
+.product-info-cat {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.product-info-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 6px 0 16px;
+  text-transform: uppercase;
+}
+
+.product-info-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product-info-desc {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.variant-group {
+  margin-bottom: 24px;
+}
+
+.variant-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.color-options-flex, .size-options-flex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-swatch-btn, .size-pill-btn {
+  padding: 10px 18px;
+  font-size: 0.82rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.color-swatch-btn.active, .size-pill-btn.active {
+  border-color: var(--text-primary);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.add-to-bag-strip {
+  display: flex;
+  gap: 12px;
+  margin: 36px 0 48px;
+}
+
+.qty-counter-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+}
+
+.qty-counter-box button {
+  width: 44px;
+  height: 52px;
+  font-size: 1.2rem;
+}
+
+.qty-counter-box span {
+  width: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.add-bag-btn {
+  flex-grow: 1;
+}
+
+.product-policy-accordion {
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+
+.policy-item {
+  margin-bottom: 20px;
+}
+
+.policy-item strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+}
+
+.policy-item p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}

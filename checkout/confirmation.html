@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation — NOIRÉ</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Thank you for your order with NOIRÉ Studio.
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container" style="justify-content:center;">
+      <a href="../index.html" class="brand-logo-center">NOIRÉ</a>
+    </div>
+  </header>
+
+  <main style="padding:80px 0 120px;">
+    <div class="container" style="max-width:800px;">
+      <div style="text-align:center; margin-bottom:48px;" id="confirmation-header-box">
+        <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-accent); font-weight:700;">ORDER CONFIRMED</span>
+        <h1 style="font-family:var(--font-heading); font-size:3.5rem; text-transform:uppercase; margin:8px 0 12px;">THANK YOU, ALEX.</h1>
+        <p style="font-size:1.1rem; color:var(--text-secondary);" id="confirmation-sub-text">Your order confirmation has been emailed to alex.morgan@example.com.</p>
+      </div>
+
+      <div class="cart-summary-box" id="confirmation-details-box">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div style="display:flex; gap:16px; justify-content:center; margin-top:40px;">
+        <a href="../shop/shop.html" class="btn btn-primary btn-lg">Continue Shopping →</a>
+        <a href="../orders/orders.html" class="btn btn-outline btn-lg">View My Orders</a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="padding:60px 0 40px; background-color:var(--text-primary); color:var(--bg-primary);">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-heading); font-size:2rem; letter-spacing:0.15em;">NOIRÉ</span>
+      <div style="font-size:0.82rem; color:var(--text-muted);">
+        &copy; 2026 NOIRÉ Studio. NOIRÉ is a fictional portfolio demonstration project.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const orderId = urlParams.get('id');
+
+      const orders = getStoredOrders();
+      const order = orders.find(o => o.id === orderId) || orders[0];
+
+      if (!order) return;
+
+      const detailsBox = document.getElementById('confirmation-details-box');
+      if (detailsBox) {
+        detailsBox.innerHTML = `
+          <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-color); padding-bottom:16px; margin-bottom:20px;">
+            <div>
+              <strong style="font-size:1.1rem; display:block;">ORDER #${order.id}</strong>
+              <span style="font-size:0.84rem; color:var(--color-secondary);">${order.date}</span>
+            </div>
+            <div style="text-align:right;">
+              <span style="font-size:0.75rem; text-transform:uppercase; color:var(--color-accent); font-weight:700;">ESTIMATED DELIVERY</span>
+              <strong style="display:block; font-size:1rem;">${order.estimatedDelivery}</strong>
+            </div>
+          </div>
+
+          <h4 style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">ORDERED ITEMS</h4>
+          <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+            ${order.items.map(item => `
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="display:flex; gap:12px; align-items:center;">
+                  <img src="${item.product.image}" style="width:40px; height:40px; object-fit:cover; border-radius:2px;">
+                  <div>
+                    <strong style="font-size:0.88rem;">${item.product.name}</strong>
+                    <div style="font-size:0.75rem; color:var(--color-secondary);">${item.color} • ${item.size} • Qty ${item.quantity}</div>
+                  </div>
+                </div>
+                <strong style="font-size:0.9rem;">₹${item.lineTotal.toLocaleString('en-IN')}</strong>
+              </div>
+            `).join('')}
+          </div>
+
+          <div style="border-top:1px solid var(--border-color); padding-top:16px; font-size:0.9rem;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+              <span>Subtotal</span>
+              <span>₹${order.subtotal.toLocaleString('en-IN')}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+              <span>Shipping (${order.paymentMethod})</span>
+              <span>${order.shippingCost === 0 ? 'FREE' : `₹${order.shippingCost}`}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-top:12px; padding-top:12px; border-top:1px solid var(--border-color); font-size:1.3rem; font-weight:800;">
+              <span>Total Paid</span>
+              <span>₹${order.total.toLocaleString('en-IN')}</span>
+            </div>
+          </div>
+
+          <div style="margin-top:24px; padding-top:20px; border-top:1px solid var(--border-color); font-size:0.85rem; color:var(--color-secondary);">
+            <strong>Shipping Address:</strong> ${order.customerName}, ${order.shippingAddress}
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

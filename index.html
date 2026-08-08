@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRÉ — Objects Made for Everyday Living</title>
+  <meta name="description" content="NOIRÉ creates thoughtfully designed everyday objects, accessories, apparel, and lifestyle pieces.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Complimentary shipping on orders over ₹5,000.
+  </div>
+
+  <!-- Editorial Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <ul class="nav-links-left">
+        <li><a href="shop/shop.html">Shop All</a></li>
+        <li><a href="shop/shop.html?category=Bags">Bags</a></li>
+        <li><a href="shop/shop.html?category=Watches">Watches</a></li>
+        <li><a href="shop/shop.html?category=Home">Home</a></li>
+      </ul>
+
+      <a href="index.html" class="brand-logo-center">NOIRÉ</a>
+
+      <div class="header-actions-right">
+        <a href="#" id="nav-search-trigger">Search 🔍</a>
+        <a href="shop/shop.html">Wishlist (<span class="wishlist-count-badge">0</span>)</a>
+        <a href="cart/cart.html">Bag (<span class="bag-count-badge">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center;">
+        <div>
+          <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-accent); font-weight:700; display:block; margin-bottom:16px;">NEW COLLECTION 2026</span>
+          <h1 class="hero-title">EVERYDAY<br>OBJECTS.<br>CONSIDERED.</h1>
+          <p class="hero-subtitle">Thoughtfully designed essentials for the spaces you live in and the life you lead.</p>
+          <div style="display:flex; gap:16px; margin-top:36px;">
+            <a href="shop/shop.html" class="btn btn-primary btn-lg">Shop Collection →</a>
+            <a href="shop/shop.html?sort=newest" class="btn btn-outline btn-lg">Explore New Arrivals</a>
+          </div>
+        </div>
+
+        <div style="aspect-ratio:4/5; overflow:hidden; background-color:var(--bg-surface);">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collections Section -->
+  <section style="padding:100px 0; border-bottom:1px solid var(--border-color);">
+    <div class="container">
+      <div style="margin-bottom:48px; display:flex; justify-content:space-between; align-items:flex-end;">
+        <div>
+          <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-muted);">COLLECTIONS</span>
+          <h2 style="font-family:var(--font-heading); font-size:2.8rem; font-weight:400; text-transform:uppercase;">CURATED FOR LIVING</h2>
+        </div>
+        <a href="shop/shop.html" class="btn-link" style="font-size:0.88rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">View All Categories →</a>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;">
+        <!-- Collection 1: EVERYDAY -->
+        <div style="display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:#FAF8F5; margin-bottom:20px;">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-size:0.75rem; color:var(--color-accent); font-weight:700;">COLLECTION 01</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.8rem; text-transform:uppercase; margin:4px 0 8px;">EVERYDAY ESSENTIALS</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Bags, leather goods, and daily carry pieces built to endure.</p>
+          <a href="shop/shop.html?collection=EVERYDAY" style="font-size:0.84rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em;">Explore Everyday →</a>
+        </div>
+
+        <!-- Collection 2: PERSONAL -->
+        <div style="display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:#FAF8F5; margin-bottom:20px;">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-size:0.75rem; color:var(--color-accent); font-weight:700;">COLLECTION 02</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.8rem; text-transform:uppercase; margin:4px 0 8px;">PERSONAL ADORNMENT</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Watches, jewelry, eyewear, and tailored knitwear.</p>
+          <a href="shop/shop.html?collection=PERSONAL" style="font-size:0.84rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em;">Explore Personal →</a>
+        </div>
+
+        <!-- Collection 3: HOME -->
+        <div style="display:flex; flex-direction:column;">
+          <div style="aspect-ratio:4/5; overflow:hidden; background:#FAF8F5; margin-bottom:20px;">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <span style="font-size:0.75rem; color:var(--color-accent); font-weight:700;">COLLECTION 03</span>
+          <h3 style="font-family:var(--font-heading); font-size:1.8rem; text-transform:uppercase; margin:4px 0 8px;">HOME & OBJECTS</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Tactile ceramics, task lighting, and desk accents.</p>
+          <a href="shop/shop.html?collection=HOME" style="font-size:0.84rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em;">Explore Home →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section style="padding:100px 0;">
+    <div class="container">
+      <div style="margin-bottom:48px; text-align:center;">
+        <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-accent); font-weight:700;">SELECTED PIECES</span>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; font-weight:400; text-transform:uppercase;">THE EDIT</h2>
+      </div>
+
+      <div class="products-grid" id="homepage-featured-grid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <a href="shop/shop.html" class="btn btn-outline btn-lg">View Full Collection (16 Pieces) →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story Section -->
+  <section style="padding:100px 0; background-color:var(--bg-surface); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+    <div class="container" style="max-width:800px; text-align:center;">
+      <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-accent); font-weight:700; display:block; margin-bottom:16px;">STUDIO MANIFESTO</span>
+      <h2 style="font-family:var(--font-heading); font-size:3rem; font-weight:400; text-transform:uppercase; line-height:1.2; margin-bottom:24px;">
+        "DESIGNED FOR THE RHYTHM OF EVERYDAY LIFE."
+      </h2>
+      <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.8;">
+        NOIRÉ creates considered objects that balance function, material integrity, and architectural form. Every seam, edge, and surface is sculpted to elevate the rituals of daily routine.
+      </p>
+    </div>
+  </section>
+
+  <footer style="padding:60px 0 40px; background-color:var(--text-primary); color:var(--bg-primary);">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-heading); font-size:2rem; letter-spacing:0.15em;">NOIRÉ</span>
+      <div style="font-size:0.82rem; color:var(--text-muted);">
+        &copy; 2026 NOIRÉ Studio. NOIRÉ is a fictional portfolio demonstration project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Overlay Drawer -->
+  <div class="overlay-drawer" id="search-overlay-drawer">
+    <div class="drawer-content-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+        <h3 style="font-family:var(--font-heading); font-size:1.6rem;">SEARCH PIECES</h3>
+        <button id="search-close-btn" style="font-size:1.4rem; cursor:pointer;">✕</button>
+      </div>
+
+      <input type="text" id="overlay-search-input" placeholder="Type to search bags, watches, ceramics..." style="width:100%; padding:14px; border:1px solid var(--border-color); font-size:1rem; margin-bottom:24px;">
+
+      <div id="overlay-search-results">
+        <p style="color:var(--color-secondary);">Start typing to search products...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Added To Bag Drawer -->
+  <div class="overlay-drawer" id="added-to-bag-drawer">
+    <div class="drawer-content-box" id="added-bag-body"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('homepage-featured-grid');
+      if (!grid) return;
+
+      const featured = NOIRE_PRODUCTS.slice(0, 8);
+      const wishlist = getStoredWishlist();
+
+      grid.innerHTML = featured.map(p => {
+        const isWishlisted = wishlist.includes(p.id);
+        return `
+          <div class="product-card">
+            <div class="product-card-thumb">
+              ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
+              <button class="card-wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="handleWishlistClick(event, '${p.id}')">
+                ${isWishlisted ? '♥' : '♡'}
+              </button>
+
+              <a href="product/product.html?id=${p.id}" class="card-img-link">
+                <img src="${p.image}" class="primary-img" alt="${p.name}">
+                <img src="${p.imageSecondary || p.image}" class="secondary-img" alt="${p.name}">
+              </a>
+
+              <button class="quick-add-btn" onclick="openQuickAddModal('${p.id}')">+ Quick Add</button>
+            </div>
+
+            <div class="product-card-body">
+              <span class="card-cat">${p.category}</span>
+              <h3 class="card-title"><a href="product/product.html?id=${p.id}">${p.name}</a></h3>
+              <div class="card-price">${p.priceFormatted}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    });
+  </script>
+</body>
+</html>

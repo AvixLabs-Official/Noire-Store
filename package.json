@@ -1,0 +1,19 @@
+{
+  "name": "noire-luxury-store",
+  "version": "1.0.0",
+  "description": "NOIRÉ - Objects made for everyday living. Quiet luxury e-commerce web application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "e-commerce",
+    "luxury-brand",
+    "shopping-store",
+    "d2c-platform",
+    "freelance-demo"
+  ],
+  "author": "Antigravity Freelance Demo",
+  "license": "MIT"
+}

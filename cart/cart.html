@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Bag — NOIRÉ</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Complimentary shipping on orders over ₹5,000.
+  </div>
+
+  <!-- Editorial Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <ul class="nav-links-left">
+        <li><a href="../shop/shop.html">← Continue Shopping</a></li>
+      </ul>
+
+      <a href="../index.html" class="brand-logo-center">NOIRÉ</a>
+
+      <div class="header-actions-right">
+        <a href="../shop/shop.html">Wishlist (<span class="wishlist-count-badge">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding:60px 0 100px;">
+    <div class="container" id="cart-page-stage">
+      <!-- Rendered dynamically by js/cart.js -->
+    </div>
+  </main>
+
+  <footer style="padding:60px 0 40px; background-color:var(--text-primary); color:var(--bg-primary);">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-heading); font-size:2rem; letter-spacing:0.15em;">NOIRÉ</span>
+      <div style="font-size:0.82rem; color:var(--text-muted);">
+        &copy; 2026 NOIRÉ Studio. NOIRÉ is a fictional portfolio demonstration project.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

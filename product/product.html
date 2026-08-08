@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — NOIRÉ</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Complimentary shipping on orders over ₹5,000.
+  </div>
+
+  <!-- Editorial Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <ul class="nav-links-left">
+        <li><a href="../shop/shop.html">← Back to Collection</a></li>
+      </ul>
+
+      <a href="../index.html" class="brand-logo-center">NOIRÉ</a>
+
+      <div class="header-actions-right">
+        <a href="#" id="nav-search-trigger">Search 🔍</a>
+        <a href="../shop/shop.html">Wishlist (<span class="wishlist-count-badge">0</span>)</a>
+        <a href="../cart/cart.html">Bag (<span class="bag-count-badge">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="product-detail-grid" id="product-detail-stage">
+        <!-- Rendered dynamically by js/product.js -->
+      </div>
+
+      <!-- Recently Viewed Section -->
+      <div style="padding:60px 0 100px; border-top:1px solid var(--border-color);">
+        <h3 style="font-family:var(--font-heading); font-size:2.2rem; text-transform:uppercase; margin-bottom:32px;">RECENTLY VIEWED</h3>
+        <div class="products-grid" id="recently-viewed-grid" style="grid-template-columns:repeat(4, 1fr);"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer style="padding:60px 0 40px; background-color:var(--text-primary); color:var(--bg-primary);">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-heading); font-size:2rem; letter-spacing:0.15em;">NOIRÉ</span>
+      <div style="font-size:0.82rem; color:var(--text-muted);">
+        &copy; 2026 NOIRÉ Studio. NOIRÉ is a fictional portfolio demonstration project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Overlay Drawer -->
+  <div class="overlay-drawer" id="search-overlay-drawer">
+    <div class="drawer-content-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+        <h3 style="font-family:var(--font-heading); font-size:1.6rem;">SEARCH PIECES</h3>
+        <button id="search-close-btn" style="font-size:1.4rem; cursor:pointer;">✕</button>
+      </div>
+
+      <input type="text" id="overlay-search-input" placeholder="Type to search bags, watches, ceramics..." style="width:100%; padding:14px; border:1px solid var(--border-color); font-size:1rem; margin-bottom:24px;">
+
+      <div id="overlay-search-results">
+        <p style="color:var(--color-secondary);">Start typing to search products...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Added To Bag Drawer -->
+  <div class="overlay-drawer" id="added-to-bag-drawer">
+    <div class="drawer-content-box" id="added-bag-body"></div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/product.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

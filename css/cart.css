@@ -1,0 +1,98 @@
+/* ==========================================================================
+   NOIRÉ - Shopping Bag & Checkout Stylesheet
+   ========================================================================== */
+
+.cart-items-list {
+  border-top: 1px solid var(--border-color);
+}
+
+.cart-item-row {
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr 1fr 40px;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  background-color: var(--bg-surface);
+}
+
+.cart-item-info h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+  width: fit-content;
+  padding: 4px 10px;
+}
+
+.cart-item-qty button {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cart-item-remove-btn {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.cart-item-remove-btn:hover {
+  color: var(--text-primary);
+}
+
+.cart-summary-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+}
+
+/* Checkout Form Boxes */
+.checkout-form-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+  padding: 60px 0 100px;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-input-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.payment-fields-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  margin-top: 12px;
+}
