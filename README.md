@@ -1,54 +1,51 @@
-# NOIRÉ — Quiet Luxury E-Commerce Experience
+# NOIRÉ Luxury Store
 
-![NOIRÉ Store](https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop)
+Premium e-commerce experience with product discovery, filtering, wishlist, cart, and checkout flows.
 
-*"Objects made for everyday living."*
+## Live Demo
 
-**NOIRÉ** is a quiet-luxury e-commerce web application featuring product catalog search, category & price filters, product detail modals, wishlist storage, promo coupon engine, slide-out cart drawer, and multi-step checkout.
-
----
-
-## 🚀 Live Demo
-
-- **Public Live Application**: [https://noire-store.onrender.com/](https://noire-store.onrender.com/)
+- **[View Live Demo](https://noire-store.onrender.com/)**
 - **GitHub Repository**: [https://github.com/AvixLabs-Official/Noire-Store](https://github.com/AvixLabs-Official/Noire-Store)
 
----
+## Overview
 
-## ✨ Key Features
+NOIRÉ is a quiet-luxury e-commerce web application engineered to showcase modern D2C online retail experiences. The application demonstrates high-end visual design combined with functional frontend shopping logic.
 
-- **Product Catalog & Search**: Instant real-time keyword search and category filtering (Ceramics, Leather Goods, Apparel, Fragrance).
-- **Variant Selectors & Stock State**: Color, size, and material variant selection.
-- **Slide-Out Quick Add Cart Drawer**: Add items, apply promo codes (`NOIRE10`, `WELCOME15`), and calculate tax/shipping.
-- **Multi-Step Checkout UI**: Shipping address form, payment method selector, order confirmation summary, and order history ledger.
-- **Wishlist Management**: Save favorite lifestyle products to local wishlist.
+The user journey spans product discovery, real-time category filtering, color/size variant selection, LocalStorage wishlist persistence, dynamic promo code validation, slide-out cart drawer, and a multi-step checkout workflow.
 
----
+> **Disclaimer**: This is a portfolio demonstration project and not a client project.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend**: HTML5, Vanilla CSS3, JavaScript (ES6+)
-- **Backend**: Node.js `server.js` HTTP Server
-- **Deployment**: Render Web Service
+- Instant product catalog search & category filtering
+- Variant selection (colors, sizes, materials) & stock state management
+- LocalStorage wishlist item bookmarking
+- Slide-out cart drawer with promo code engine (`NOIRE10`, `WELCOME15`)
+- Multi-step checkout workflow with shipping calculator and order summary
+- LocalStorage order history ledger
 
----
+## Technologies
 
-## 💻 Local Installation & Setup
+- HTML5
+- CSS3 (Custom Design Tokens & Glassmorphism)
+- JavaScript (ES6+ State Engine)
+- Node.js HTTP Server (`server.js`)
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/AvixLabs-Official/Noire-Store.git
-   cd Noire-Store
-   ```
+## Screenshots
 
-2. **Start Node Server**:
-   ```bash
-   node server.js
-   ```
-   Open `http://localhost:8088` in your browser.
+![NOIRÉ Luxury Store Interface](images/noire_store_preview.jpg)
 
----
+## Responsive Design
 
-## 📄 License
+Engineered and tested across viewports:
+- Desktop (1440px +)
+- Tablet (768px – 1024px)
+- Mobile (360px – 480px)
 
-Developed by **[Avix / AvixLabs](https://github.com/AvixLabs-Official)**. Released under the MIT License.
+## Project Type
+
+Portfolio Demonstration · E-Commerce
+
+## Disclaimer
+
+This project is a portfolio demonstration created to showcase frontend development, UI/UX, and interactive web-development capabilities. It is not presented as client work.
